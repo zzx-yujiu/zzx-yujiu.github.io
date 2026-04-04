@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&amp;family=Newsreader:ital,opsz,wght@1,6..72,400&amp;family=Space+Grotesk:wght@300;400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#919090",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-container": "#292a2a",
+                        "on-background": "#e5e2e1",
+                        "on-secondary": "#2f3131",
+                        "inverse-on-surface": "#313030",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container-high": "#2a2a2a",
+                        "outline": "#ae887f",
+                        "error-container": "#93000a",
+                        "primary-container": "#ff562c",
+                        "secondary": "#c6c6c7",
+                        "tertiary-fixed": "#e3e2e2",
+                        "on-primary-container": "#560e00",
+                        "on-primary-fixed-variant": "#8a1d00",
+                        "on-primary-fixed": "#3c0700",
+                        "on-tertiary": "#303031",
+                        "tertiary": "#c7c6c6",
+                        "surface-dim": "#131313",
+                        "surface-variant": "#353534",
+                        "on-primary": "#621100",
+                        "secondary-container": "#454747",
+                        "on-secondary-container": "#b4b5b5",
+                        "on-secondary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-container": "#201f1f",
+                        "outline-variant": "#5e3f38",
+                        "secondary-fixed": "#e2e2e2",
+                        "surface": "#131313",
+                        "on-error": "#690005",
+                        "background": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "on-surface-variant": "#e8bdb3",
+                        "primary-fixed": "#ffdad2",
+                        "surface-tint": "#ffb4a2",
+                        "primary-fixed-dim": "#ffb4a2",
+                        "primary": "#ffb4a2",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "inverse-primary": "#b42800",
+                        "surface-bright": "#3a3939",
+                        "on-surface": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#c6c6c7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Newsreader"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #0A0A0A; color: #FAFAFA; }
+        .noise-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.015;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        .v-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #FF3D00;
+            transition: width 0.15s ease-in-out;
+        }
+        .v-underline:hover::after {
+            width: 100%;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-[#FF3D00] selection:text-[#FAFAFA]">
+<div class="noise-overlay"></div>
+<!-- Header Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#0A0A0A]/80 backdrop-blur-md border-b border-[#262626] flex justify-between items-center px-6 md:px-12 py-6">
+<div class="text-4xl font-black tracking-tighter text-[#FAFAFA] font-headline">ZX</div>
+<div class="flex items-center gap-8">
+<div class="hidden md:flex gap-8 font-headline uppercase tracking-wider text-sm">
+<a class="text-[#FF3D00] font-bold border-b-2 border-[#FF3D00] pb-1 transition-all" href="#">HOME</a>
+<a class="text-[#FAFAFA] hover:text-[#FF3D00] transition-colors duration-150" href="#">ABOUT</a>
+<a class="text-[#FAFAFA] hover:text-[#FF3D00] transition-colors duration-150" href="#">CONTACT</a>
+<a class="text-[#FAFAFA] hover:text-[#FF3D00] transition-colors duration-150" href="#">WORK</a>
+</div>
+<button class="bg-[#FF3D00] text-[#FAFAFA] px-6 py-2 text-sm font-headline font-bold tracking-widest scale-100 active:scale-95 transition-all">
+                GET IN TOUCH
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="min-h-screen flex flex-col justify-center px-6 md:px-12 pt-24 pb-12 overflow-x-hidden">
+<!-- Hero Section -->
+<section class="relative">
+<div class="h-1 w-16 bg-[#FF3D00] mb-12"></div>
+<h1 class="text-6xl md:text-9xl font-headline font-black tracking-tighter leading-[0.85] text-[#FAFAFA] mb-16 max-w-5xl">
+                HI HERE <br/> IS ZX
+            </h1>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-12">
+<div class="max-w-xl">
+<p class="text-lg md:text-xl text-[#737373] leading-relaxed italic mb-8">
+                        Independent creative director and editorial designer focusing on radical clarity within the digital landscape. 
+                        I build systems that reject the soft and embrace the architectural.
+                    </p>
+<div class="flex gap-12 font-label uppercase tracking-[0.2em] text-xs">
+<a class="relative v-underline text-[#FAFAFA] font-bold py-2" href="#">Work</a>
+<a class="relative v-underline text-[#FAFAFA] font-bold py-2" href="#">Contact</a>
+</div>
+</div>
+<div class="hidden md:block font-mono text-[10px] text-[#737373] uppercase tracking-[0.3em] vertical-text">
+<span class="block transform rotate-90 origin-left whitespace-nowrap">ESTABLISHED MMXXIV — ARCHIVE 01</span>
+</div>
+</div>
+</section>
+<!-- Dynamic Content Section (The Editorial Grid) -->
+<section class="mt-48 grid grid-cols-1 md:grid-cols-12 gap-y-24 gap-x-12">
+<!-- Bento Item 1 -->
+<div class="md:col-span-8 border border-[#262626] p-12 hover:bg-[#1A1A1A] transition-colors duration-200 group">
+<div class="flex justify-between items-start mb-24">
+<span class="font-label text-xs text-[#737373] tracking-widest uppercase">LATEST PROJECT / 001</span>
+<span class="material-symbols-outlined text-[#FF3D00] transform group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+<h2 class="text-5xl md:text-7xl font-headline font-bold tracking-tighter text-[#FAFAFA] mb-6">
+                    RADICAL <br/> BRUTALISM
+                </h2>
+<p class="text-[#737373] font-label text-sm uppercase tracking-widest">Digital Identity for New Media</p>
+</div>
+<!-- Bento Item 2 -->
+<div class="md:col-span-4 border border-[#262626] p-12 flex flex-col justify-between">
+<div class="h-px w-full bg-[#262626] mb-8"></div>
+<div>
+<h3 class="text-2xl font-headline font-bold text-[#FAFAFA] mb-4">Philosophy</h3>
+<p class="text-sm text-[#737373] leading-relaxed">
+                        Architecture in the browser. We remove the excess until only the truth of the typography remains.
+                    </p>
+</div>
+</div>
+<!-- Pull Quote Section -->
+<div class="md:col-span-12 py-24 border-y border-[#262626]">
+<blockquote class="text-4xl md:text-6xl font-body italic text-[#FAFAFA] max-w-4xl">
+                    "The grid is the soul of the page, but the void is where the message lives."
+                </blockquote>
+<cite class="block mt-8 font-label text-xs text-[#FF3D00] uppercase tracking-widest">— ZX MANIFESTO</cite>
+</div>
+<!-- Bento Item 3 (Asymmetric) -->
+<div class="md:col-start-2 md:col-span-5 border border-[#262626] p-12">
+<span class="font-label text-xs text-[#737373] tracking-widest uppercase block mb-12">CAPABILITIES</span>
+<ul class="space-y-4 font-headline text-2xl font-bold">
+<li class="flex items-center gap-4 group">
+<span class="w-2 h-2 bg-[#FF3D00]"></span>
+<span class="group-hover:text-[#FF3D00] transition-colors">Visual Systems</span>
+</li>
+<li class="flex items-center gap-4 group">
+<span class="w-2 h-2 bg-[#FF3D00]"></span>
+<span class="group-hover:text-[#FF3D00] transition-colors">Editorial UI</span>
+</li>
+<li class="flex items-center gap-4 group">
+<span class="w-2 h-2 bg-[#FF3D00]"></span>
+<span class="group-hover:text-[#FF3D00] transition-colors">Type Design</span>
+</li>
+</ul>
+</div>
+<!-- Bento Item 4 -->
+<div class="md:col-span-5 border border-[#262626] p-12 flex items-center justify-center bg-[#FF3D00] text-[#FAFAFA] group cursor-pointer">
+<div class="text-center">
+<span class="font-label text-[10px] tracking-[0.5em] uppercase block mb-4">Collaborate</span>
+<h2 class="text-4xl font-headline font-black uppercase tracking-tighter">Start the <br/> dialogue</h2>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-[#0A0A0A] border-t border-[#262626] flex flex-col md:flex-row justify-between items-center px-6 md:px-12 py-10">
+<div class="text-[#FAFAFA] font-bold font-headline mb-4 md:mb-0">ZX ARCHIVE</div>
+<div class="flex gap-8">
+<a class="text-[#737373] font-label text-xs font-mono tracking-widest hover:text-[#FAFAFA] transition-colors duration-150 underline-offset-4 hover:underline decoration-[#FF3D00]" href="#">LINKEDIN</a>
+<a class="text-[#737373] font-label text-xs font-mono tracking-widest hover:text-[#FAFAFA] transition-colors duration-150 underline-offset-4 hover:underline decoration-[#FF3D00]" href="#">TWITTER</a>
+<a class="text-[#737373] font-label text-xs font-mono tracking-widest hover:text-[#FAFAFA] transition-colors duration-150 underline-offset-4 hover:underline decoration-[#FF3D00]" href="#">DRIBBBLE</a>
+</div>
+<div class="mt-8 md:mt-0 text-[#737373] font-label text-xs font-mono tracking-widest">
+            © 2024 ZX ARCHIVE
+        </div>
+</footer>
+</body></html>

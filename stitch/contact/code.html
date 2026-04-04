@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&amp;family=Newsreader:ital,wght@0,400;0,700;1,400&amp;family=Space+Grotesk:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#919090",
+                    "surface-container-highest": "#353534",
+                    "on-tertiary-container": "#292a2a",
+                    "on-background": "#e5e2e1",
+                    "on-secondary": "#2f3131",
+                    "inverse-on-surface": "#313030",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-container-high": "#2a2a2a",
+                    "outline": "#ae887f",
+                    "error-container": "#93000a",
+                    "primary-container": "#ff562c",
+                    "secondary": "#c6c6c7",
+                    "tertiary-fixed": "#e3e2e2",
+                    "on-primary-container": "#560e00",
+                    "on-primary-fixed-variant": "#8a1d00",
+                    "on-primary-fixed": "#3c0700",
+                    "on-tertiary": "#303031",
+                    "tertiary": "#c7c6c6",
+                    "surface-dim": "#131313",
+                    "surface-variant": "#353534",
+                    "on-primary": "#621100",
+                    "secondary-container": "#454747",
+                    "on-secondary-container": "#b4b5b5",
+                    "on-secondary-fixed-variant": "#454747",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "surface-container": "#201f1f",
+                    "outline-variant": "#5e3f38",
+                    "secondary-fixed": "#e2e2e2",
+                    "surface": "#131313",
+                    "on-error": "#690005",
+                    "background": "#131313",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "tertiary-fixed-dim": "#c7c6c6",
+                    "on-surface-variant": "#e8bdb3",
+                    "primary-fixed": "#ffdad2",
+                    "surface-tint": "#ffb4a2",
+                    "primary-fixed-dim": "#ffb4a2",
+                    "primary": "#ffb4a2",
+                    "on-tertiary-fixed-variant": "#464747",
+                    "inverse-primary": "#b42800",
+                    "surface-bright": "#3a3939",
+                    "on-surface": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "secondary-fixed-dim": "#c6c6c7"
+            },
+            "borderRadius": {
+                    "none": "0px",
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Epilogue"],
+                    "body": ["Newsreader"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .brutalist-input {
+        background-color: #1A1A1A;
+        border: 1px solid #262626;
+        border-radius: 0px !important;
+      }
+      .brutalist-input:focus {
+        border-color: #FF3D00;
+        outline: none;
+        ring: 0;
+      }
+      .accent-underline {
+        position: relative;
+        text-decoration: none;
+      }
+      .accent-underline::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #FF3D00;
+        transition: width 0.15s ease-in-out;
+      }
+      .accent-underline:hover::after {
+        width: 100%;
+      }
+    </style>
+</head>
+<body class="bg-[#0A0A0A] text-[#FAFAFA] font-body selection:bg-[#FF3D00] selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full rounded-none bg-[#0A0A0A]/80 backdrop-blur-md border-b border-[#262626] z-50 flex justify-between items-center px-12 py-6">
+<div class="text-4xl font-black tracking-tighter text-[#FAFAFA]">ZX</div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="font-['Epilogue'] uppercase tracking-wider text-sm text-[#FAFAFA] hover:text-[#FF3D00] transition-colors duration-150 scale-100 active:scale-95 transition-all" href="#">HOME</a>
+<a class="font-['Epilogue'] uppercase tracking-wider text-sm text-[#FAFAFA] hover:text-[#FF3D00] transition-colors duration-150 scale-100 active:scale-95 transition-all" href="#">ABOUT</a>
+<a class="font-['Epilogue'] uppercase tracking-wider text-sm text-[#FF3D00] font-bold border-b-2 border-[#FF3D00] pb-1 scale-100 active:scale-95 transition-all" href="#">CONTACT</a>
+<a class="font-['Epilogue'] uppercase tracking-wider text-sm text-[#FAFAFA] hover:text-[#FF3D00] transition-colors duration-150 scale-100 active:scale-95 transition-all" href="#">WORK</a>
+</div>
+<button class="font-['Epilogue'] uppercase tracking-wider text-sm text-[#FF3D00] border border-[#FF3D00] px-6 py-2 hover:bg-[#FF3D00] hover:text-white transition-all">GET IN TOUCH</button>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Header -->
+<header class="mb-24">
+<h1 class="text-6xl md:text-9xl font-headline font-black tracking-tighter uppercase leading-none">
+                GET IN <span class="text-[#FF3D00]">TOUCH</span>
+</h1>
+</header>
+<!-- Main Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<!-- Left Column: Typographic Avatar -->
+<div class="relative group">
+<div class="aspect-square bg-[#1A1A1A] flex items-center justify-center border border-[#262626] overflow-hidden">
+<span class="text-[25rem] font-headline font-black text-[#FAFAFA] select-none opacity-10 group-hover:opacity-20 transition-opacity duration-300">Z</span>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-9xl font-headline font-black text-[#FF3D00] tracking-tighter drop-shadow-2xl">Z</span>
+</div>
+</div>
+<div class="mt-8 flex flex-col gap-6">
+<div class="flex items-center gap-4 group cursor-pointer">
+<span class="material-symbols-outlined text-[#737373] group-hover:text-[#FF3D00]">mail</span>
+<span class="font-mono text-sm tracking-widest text-[#737373] group-hover:text-[#FF3D00] transition-colors">HELLO@ZX-ARCHIVE.COM</span>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<span class="material-symbols-outlined text-[#737373] group-hover:text-[#FF3D00]">terminal</span>
+<span class="font-mono text-sm tracking-widest text-[#737373] group-hover:text-[#FF3D00] transition-colors">GITHUB/ZX-PROJECTS</span>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<span class="material-symbols-outlined text-[#737373] group-hover:text-[#FF3D00]">hub</span>
+<span class="font-mono text-sm tracking-widest text-[#737373] group-hover:text-[#FF3D00] transition-colors">LINKEDIN/ZX-OFFICIAL</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Form -->
+<div class="space-y-12">
+<div class="space-y-4">
+<p class="font-headline text-3xl italic text-[#737373] leading-tight">
+                        "The architecture of communication is as vital as the message itself."
+                    </p>
+<p class="font-label text-xs uppercase tracking-[0.2em] text-[#FF3D00] font-bold">Inquiry Protocol</p>
+</div>
+<form class="space-y-8">
+<div class="space-y-2">
+<label class="font-label text-xs font-bold tracking-widest text-[#737373] uppercase">Identity / Name</label>
+<input class="w-full brutalist-input p-4 font-mono text-sm uppercase tracking-wider text-[#FAFAFA] placeholder-[#262626]" placeholder="WHO ARE YOU?" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs font-bold tracking-widest text-[#737373] uppercase">Communication / Email</label>
+<input class="w-full brutalist-input p-4 font-mono text-sm uppercase tracking-wider text-[#FAFAFA] placeholder-[#262626]" placeholder="WHERE CAN I REACH YOU?" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs font-bold tracking-widest text-[#737373] uppercase">Objective / Subject</label>
+<select class="w-full brutalist-input p-4 font-mono text-sm uppercase tracking-wider text-[#FAFAFA] appearance-none">
+<option>NEW COLLABORATION</option>
+<option>GENERAL INQUIRY</option>
+<option>TECHNICAL SPECIFICATION</option>
+<option>PRESS / MEDIA</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs font-bold tracking-widest text-[#737373] uppercase">Transmission / Message</label>
+<textarea class="w-full brutalist-input p-4 font-mono text-sm uppercase tracking-wider text-[#FAFAFA] placeholder-[#262626] resize-none" placeholder="STATE YOUR PURPOSE..." rows="6"></textarea>
+</div>
+<div class="pt-4">
+<button class="accent-underline font-headline font-black text-2xl uppercase tracking-tighter" type="submit">
+                            Send Message
+                        </button>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-none border-t border-[#262626] bg-[#0A0A0A] flex flex-col md:flex-row justify-between items-center px-12 py-10">
+<div class="text-[#FAFAFA] font-bold">ZX ARCHIVE</div>
+<div class="text-[#737373] font-['Epilogue'] text-xs font-mono tracking-widest mt-4 md:mt-0 uppercase">
+            © 2024 ZX ARCHIVE
+        </div>
+<div class="flex gap-8 mt-6 md:mt-0">
+<a class="font-['Epilogue'] text-xs font-mono tracking-widest text-[#737373] hover:text-[#FAFAFA] transition-colors duration-150 underline-offset-4 hover:underline decoration-[#FF3D00]" href="#">LINKEDIN</a>
+<a class="font-['Epilogue'] text-xs font-mono tracking-widest text-[#737373] hover:text-[#FAFAFA] transition-colors duration-150 underline-offset-4 hover:underline decoration-[#FF3D00]" href="#">TWITTER</a>
+<a class="font-['Epilogue'] text-xs font-mono tracking-widest text-[#737373] hover:text-[#FAFAFA] transition-colors duration-150 underline-offset-4 hover:underline decoration-[#FF3D00]" href="#">DRIBBBLE</a>
+</div>
+</footer>
+</body></html>
