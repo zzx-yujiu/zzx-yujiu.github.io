@@ -1,0 +1,8 @@
+export const LOGO_URL =
+  "https://lh3.googleusercontent.com/aida/AEtjO1U-_0wEEA_65AHoB4RRErMxWTuwK1qudfiEOR6QB9hoXGd9y9EIqSU5N8TKkWQHdQ0nqHvYC2_M4257obwjQJWvmdkDHvQXGFFWDC8D00z_9a3j7zbvo3TTxkDkpKDEWOYzqOBfuvqbPLdI42Xlr3dPIBY2D4jbQB5JIcD5lZLRAbTQn6oFjwrMoU6ak_dQP1wS4NB3YNtvaWXxh-89I5erKVC5O1tbk3cGNdmH3V_wYNwgUBxUWvWXGpw"
+
+export const AVATAR_URL =
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuD6NyPkDCvdOmhsd4jrpVMn3t5C6qUP07_Kwyx6n9eNt3QXUO13lKYlExw_oAsaDH0MtJ8JcWXU_ibfbQsmvv8caLIVJZkceAPGsyDy-IYsRcnO1rUfzOC_6gGOMqV2eyYxLa4rAP7P4JRKOVg_t9E3gVVyc16NJSCtH0nOWYcIhWo-Ijfi-_h-o7vr4JhxuBvpbZfUVIPRHwWrWmauwhlhGgKiiG8B54VGkWfeZq0pcMAJ6pI3juqm"
+
+export const EMAIL = "alex.ai.pm@example.com"
+export const GITHUB_URL = "https://github.com"
