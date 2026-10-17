@@ -5,19 +5,6 @@ import react from '@vitejs/plugin-react'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 
-const gradientAsciiCss = fileURLToPath(new URL('./src/components/Gradient ASCIl.css', import.meta.url))
-
-function resolveGradientAsciiCss() {
-  return {
-    name: 'resolve-gradient-ascii-css',
-    resolveId(source, importer) {
-      if (source === './GradientASCII.css' && importer?.endsWith('Gradient ASCIl.jsx')) {
-        return gradientAsciiCss
-      }
-    },
-  }
-}
-
 const docsDir = fileURLToPath(new URL('./docs', import.meta.url))
 
 function publishToDocs() {
@@ -36,5 +23,5 @@ export default defineConfig({
     outDir: 'docs',
     emptyOutDir: true,
   },
-  plugins: [react(), tailwindcss(), resolveGradientAsciiCss(), publishToDocs()],
+  plugins: [react(), tailwindcss(), publishToDocs()],
 })

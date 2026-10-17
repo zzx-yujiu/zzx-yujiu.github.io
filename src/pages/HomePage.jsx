@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import GradientASCII from '../components/Gradient ASCIl.jsx'
 
 export default function HomePage() {
   const [copiedEmail, setCopiedEmail] = useState(false)
@@ -167,33 +166,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section className="w-full" aria-label="字符渐变动效">
-          <div style={{ width: '100%', height: '600px', position: 'relative' }}>
-            <GradientASCII
-              colors={['#1e3fd8', '#f6f8ff', '#a5d8ff', '#38bdf8']}
-              shape="horizon"
-              characters=" =+xX0S8#@"
-              cellSize={18}
-              density={0.8}
-              glyphOpacity={0.85}
-              glow={0.2}
-              depthOfField={0}
-              flicker={0.2}
-              softness={0.5}
-              scale={1}
-              flow={0.5}
-              speed={1}
-              gradientOpacity={0.9}
-              grain={0.08}
-              variation={0}
-              mouseInteraction
-              scrambleRadius={0.1}
-              clickEffect="wave"
-              intro
-              lightMode={false}
-            />
           </div>
         </section>
         {/* CORE ADVANTAGES & SUPERPOWERS */}
