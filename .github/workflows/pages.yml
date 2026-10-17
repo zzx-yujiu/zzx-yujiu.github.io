@@ -1,0 +1,32 @@
+name: Publish GitHub Pages from docs
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  administration: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Serve the site from /docs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api --method PUT "repos/${{ github.repository }}/pages" \
+            --input - <<'EOF'
+          {
+            "build_type": "legacy",
+            "source": {
+              "branch": "master",
+              "path": "/docs"
+            }
+          }
+          EOF
+          gh api --method POST "repos/${{ github.repository }}/pages/builds"
